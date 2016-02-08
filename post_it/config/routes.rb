@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :posts
   devise_for :users
-  root 'home#index'
+  root 'posts#index'
   get 'home/about'
   get 'home/contact'
   get 'home/faq'

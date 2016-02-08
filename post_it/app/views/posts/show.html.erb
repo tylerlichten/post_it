@@ -1,13 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%= image_tag @post.image.url(:medium) %></br>
-  <strong>Description:</strong>
-  <%= @post.description %>
-  </br>
-</p>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8">
 
-<% if @post.user == current_user %>
-	<%= link_to 'Edit', edit_post_path(@post) %>
-<% end %>
-<%= link_to 'Back', posts_path %>
+<div class="panel panel-primary">
+  <div class="panel-heading center"><center><%= image_tag @post.image.url(:medium) %></center></div>
+  <div class="panel-body panel-custom">
+
+		<center><%= @post.description %></br>
+
+		<% if @post.user == current_user %>
+			<%= link_to 'Edit', edit_post_path(@post) %></br>
+		<% end %>
+		<%= link_to 'Back', posts_path %></center>
+	</div>
+  </div>
+ </div>
+</div>

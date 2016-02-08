@@ -4,5 +4,12 @@ $jumbotron-bg:red;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.panel-footer.panel-custom {
+    background: red;
+    color: white;
+}
 
-
+.panel-body.panel-custom {
+    background: yellow;
+    color: black;
+}
